@@ -1,0 +1,118 @@
+input {
+    display: none;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: 'Sono', sans-serif;
+} 
+
+
+h1 {
+
+    border-bottom: 0.1rem solid rgb(172, 168, 168);
+}
+
+.img_row {
+    display: block;
+    margin: 0 auto;
+    width: 17rem;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 55rem;
+}
+
+.tab {
+    text-align: center;
+}
+
+.label_row {
+    display: flex;
+    justify-content: space-between;
+    color: blue;
+    text-align: left;
+    cursor: pointer;
+    padding: 0.8rem;
+}
+
+.fa-plus {
+    display: none;
+    color: black;
+}
+
+.img_box .img_row {
+    width: 0;
+    transition: all 0.3s;
+}
+
+.row {
+    border-bottom: 0.1em solid rgb(172, 168, 168);
+}
+
+.row:active {
+    opacity: 0.6;
+}
+
+input:checked~.img_box .img_row {
+    width: 17rem;
+    height: auto;
+    padding: 1rem;
+}
+
+input:checked~.label_row {
+    color: black;
+}
+
+input:checked~.label_row .fa-plus {
+    transform: rotate(-45deg);
+}
+
+.row:active .label_row {
+    color: blue;
+}
+
+@media (min-width: 325px) {
+    .label_row {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 750px) {
+    .label_row {
+            font-size: 1.6rem;
+        }
+}
+
+@media (min-width: 1600px) {
+    .label_row {
+            font-size: 2rem;
+    }
+}
+@media (hover:hover){
+    
+    input:hover~.label_row .fa-plus {
+            transform: rotate(-45deg);
+        }
+    
+    .row:hover .img_box .img_row {
+            width: 17rem;
+            transition: all .4s;
+        }
+    
+    .rows:hover .fa-plus {
+            display: inline-block;
+        }
+    
+    .rows:hover .label_row {
+            color: black;
+        }
+    
+    .tab:hover {
+            cursor: pointer;
+        }
+    .row:active .label_row {
+        color: blue;
+        }
+}

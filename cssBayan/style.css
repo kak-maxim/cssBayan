@@ -96,20 +96,23 @@ input:checked~.label_row .fa-plus {
             transform: rotate(-45deg);
         }
     
-        .row:hover .img_box .img_row {
+    .row:hover .img_box .img_row {
             width: 17rem;
             transition: all .4s;
         }
     
-        .rows:hover .fa-plus {
+    .rows:hover .fa-plus {
             display: inline-block;
         }
     
-        .rows:hover .label_row {
+    .rows:hover .label_row {
             color: black;
         }
     
-        .tab:hover {
+    .tab:hover {
             cursor: pointer;
+        }
+    .row:active .label_row {
+        color: blue;
         }
 }
